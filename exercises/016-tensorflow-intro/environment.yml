@@ -20,6 +20,7 @@ dependencies:
 - ipython=5.2.2=py35_0
 - ipython_genutils=0.1.0=py35_0
 - ipywidgets=5.2.2=py35_1
+- jbig=2.1=0
 - jinja2=2.9.4=py35_0
 - jpeg=9b=0
 - jsonschema=2.5.1=py35_0
@@ -33,6 +34,7 @@ dependencies:
 - libiconv=1.14=0
 - libpng=1.6.27=0
 - libsodium=1.0.10=0
+- libtiff=4.0.6=3
 - libxcb=1.12=1
 - libxml2=2.9.4=0
 - markupsafe=0.23=py35_2
@@ -43,6 +45,7 @@ dependencies:
 - nbformat=4.2.0=py35_0
 - notebook=4.3.1=py35_0
 - numpy=1.12.0=py35_0
+- olefile=0.44=py35_0
 - openssl=1.0.2k=0
 - pandas=0.19.2=np112py35_1
 - pandocfilters=1.4.1=py35_0
@@ -50,6 +53,7 @@ dependencies:
 - pcre=8.39=1
 - pexpect=4.2.1=py35_0
 - pickleshare=0.7.4=py35_0
+- pillow=4.0.0=py35_1
 - pip=9.0.1=py35_1
 - prompt_toolkit=1.0.9=py35_0
 - ptyprocess=0.5.1=py35_0
@@ -94,5 +98,6 @@ dependencies:
   - prompt-toolkit==1.0.9
   - protobuf==3.2.0
   - tensorflow-gpu==1.0.0
+  - tqdm==4.11.2
 prefix: /home/mmakowski/anaconda3/envs/tensorflow
 
