@@ -1,4 +1,8 @@
 .ipynb_checkpoints
 mnist/
+__pycache__/
+cifar-10-batches-py/
+*.tar.gz
 *.zip
 *.pickle
+*.p
