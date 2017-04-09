@@ -12552,13 +12552,13 @@ Default GPU Device: /gpu:0
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of Epochs</span>
-<span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">150</span>
+<span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">400</span>
 <span class="c1"># Batch Size</span>
-<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">32</span>
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">256</span>
 <span class="c1"># RNN Size</span>
-<span class="n">rnn_size</span> <span class="o">=</span> <span class="mi">2750</span>
+<span class="n">rnn_size</span> <span class="o">=</span> <span class="mi">1024</span>
 <span class="c1"># Sequence Length</span>
-<span class="n">seq_length</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">seq_length</span> <span class="o">=</span> <span class="mi">40</span>
 <span class="c1"># Learning Rate</span>
 <span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.005</span>
 <span class="c1"># Show stats for every n number of batches</span>
@@ -12700,329 +12700,30 @@ Default GPU Device: /gpu:0
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch   0 Batch    0/215   train_loss = 8.820
-Epoch   0 Batch  100/215   train_loss = 5.846
-Epoch   0 Batch  200/215   train_loss = 5.351
-Epoch   1 Batch   85/215   train_loss = 5.405
-Epoch   1 Batch  185/215   train_loss = 5.419
-Epoch   2 Batch   70/215   train_loss = 5.278
-Epoch   2 Batch  170/215   train_loss = 5.192
-Epoch   3 Batch   55/215   train_loss = 5.097
-Epoch   3 Batch  155/215   train_loss = 4.917
-Epoch   4 Batch   40/215   train_loss = 5.213
-Epoch   4 Batch  140/215   train_loss = 4.721
-Epoch   5 Batch   25/215   train_loss = 4.498
-Epoch   5 Batch  125/215   train_loss = 4.211
-Epoch   6 Batch   10/215   train_loss = 4.729
-Epoch   6 Batch  110/215   train_loss = 4.058
-Epoch   6 Batch  210/215   train_loss = 3.951
-Epoch   7 Batch   95/215   train_loss = 3.963
-Epoch   7 Batch  195/215   train_loss = 3.894
-Epoch   8 Batch   80/215   train_loss = 3.553
-Epoch   8 Batch  180/215   train_loss = 3.641
-Epoch   9 Batch   65/215   train_loss = 3.965
-Epoch   9 Batch  165/215   train_loss = 4.066
-Epoch  10 Batch   50/215   train_loss = 4.103
-Epoch  10 Batch  150/215   train_loss = 3.714
-Epoch  11 Batch   35/215   train_loss = 3.983
-Epoch  11 Batch  135/215   train_loss = 3.514
-Epoch  12 Batch   20/215   train_loss = 3.709
-Epoch  12 Batch  120/215   train_loss = 3.395
-Epoch  13 Batch    5/215   train_loss = 3.561
-Epoch  13 Batch  105/215   train_loss = 3.309
-Epoch  13 Batch  205/215   train_loss = 3.555
-Epoch  14 Batch   90/215   train_loss = 3.464
-Epoch  14 Batch  190/215   train_loss = 3.588
-Epoch  15 Batch   75/215   train_loss = 3.197
-Epoch  15 Batch  175/215   train_loss = 3.536
-Epoch  16 Batch   60/215   train_loss = 3.764
-Epoch  16 Batch  160/215   train_loss = 3.447
-Epoch  17 Batch   45/215   train_loss = 3.269
-Epoch  17 Batch  145/215   train_loss = 3.092
-Epoch  18 Batch   30/215   train_loss = 3.372
-Epoch  18 Batch  130/215   train_loss = 3.468
-Epoch  19 Batch   15/215   train_loss = 3.551
-Epoch  19 Batch  115/215   train_loss = 3.446
-Epoch  20 Batch    0/215   train_loss = 2.778
-Epoch  20 Batch  100/215   train_loss = 3.091
-Epoch  20 Batch  200/215   train_loss = 3.483
-Epoch  21 Batch   85/215   train_loss = 3.227
-Epoch  21 Batch  185/215   train_loss = 3.618
-Epoch  22 Batch   70/215   train_loss = 3.460
-Epoch  22 Batch  170/215   train_loss = 3.694
-Epoch  23 Batch   55/215   train_loss = 3.422
-Epoch  23 Batch  155/215   train_loss = 3.339
-Epoch  24 Batch   40/215   train_loss = 3.881
-Epoch  24 Batch  140/215   train_loss = 3.500
-Epoch  25 Batch   25/215   train_loss = 3.285
-Epoch  25 Batch  125/215   train_loss = 2.992
-Epoch  26 Batch   10/215   train_loss = 3.717
-Epoch  26 Batch  110/215   train_loss = 3.204
-Epoch  26 Batch  210/215   train_loss = 3.180
-Epoch  27 Batch   95/215   train_loss = 3.321
-Epoch  27 Batch  195/215   train_loss = 3.318
-Epoch  28 Batch   80/215   train_loss = 3.011
-Epoch  28 Batch  180/215   train_loss = 3.161
-Epoch  29 Batch   65/215   train_loss = 3.577
-Epoch  29 Batch  165/215   train_loss = 3.701
-Epoch  30 Batch   50/215   train_loss = 3.843
-Epoch  30 Batch  150/215   train_loss = 3.376
-Epoch  31 Batch   35/215   train_loss = 3.637
-Epoch  31 Batch  135/215   train_loss = 3.232
-Epoch  32 Batch   20/215   train_loss = 3.499
-Epoch  32 Batch  120/215   train_loss = 3.236
-Epoch  33 Batch    5/215   train_loss = 3.395
-Epoch  33 Batch  105/215   train_loss = 3.213
-Epoch  33 Batch  205/215   train_loss = 3.331
-Epoch  34 Batch   90/215   train_loss = 3.240
-Epoch  34 Batch  190/215   train_loss = 3.424
-Epoch  35 Batch   75/215   train_loss = 3.027
-Epoch  35 Batch  175/215   train_loss = 3.350
-Epoch  36 Batch   60/215   train_loss = 3.637
-Epoch  36 Batch  160/215   train_loss = 3.334
-Epoch  37 Batch   45/215   train_loss = 3.133
-Epoch  37 Batch  145/215   train_loss = 2.967
-Epoch  38 Batch   30/215   train_loss = 3.269
-Epoch  38 Batch  130/215   train_loss = 3.343
-Epoch  39 Batch   15/215   train_loss = 3.373
-Epoch  39 Batch  115/215   train_loss = 3.330
-Epoch  40 Batch    0/215   train_loss = 2.618
-Epoch  40 Batch  100/215   train_loss = 3.008
-Epoch  40 Batch  200/215   train_loss = 3.290
-Epoch  41 Batch   85/215   train_loss = 3.130
-Epoch  41 Batch  185/215   train_loss = 3.471
-Epoch  42 Batch   70/215   train_loss = 3.368
-Epoch  42 Batch  170/215   train_loss = 3.574
-Epoch  43 Batch   55/215   train_loss = 3.339
-Epoch  43 Batch  155/215   train_loss = 3.239
-Epoch  44 Batch   40/215   train_loss = 3.738
-Epoch  44 Batch  140/215   train_loss = 3.649
-Epoch  45 Batch   25/215   train_loss = 4.193
-Epoch  45 Batch  125/215   train_loss = 3.774
-Epoch  46 Batch   10/215   train_loss = 4.302
-Epoch  46 Batch  110/215   train_loss = 3.465
-Epoch  46 Batch  210/215   train_loss = 3.248
-Epoch  47 Batch   95/215   train_loss = 3.352
-Epoch  47 Batch  195/215   train_loss = 3.313
-Epoch  48 Batch   80/215   train_loss = 2.977
-Epoch  48 Batch  180/215   train_loss = 3.146
-Epoch  49 Batch   65/215   train_loss = 3.529
-Epoch  49 Batch  165/215   train_loss = 3.665
-Epoch  50 Batch   50/215   train_loss = 3.780
-Epoch  50 Batch  150/215   train_loss = 3.327
-Epoch  51 Batch   35/215   train_loss = 3.555
-Epoch  51 Batch  135/215   train_loss = 3.207
-Epoch  52 Batch   20/215   train_loss = 3.468
-Epoch  52 Batch  120/215   train_loss = 3.203
-Epoch  53 Batch    5/215   train_loss = 3.382
-Epoch  53 Batch  105/215   train_loss = 3.156
-Epoch  53 Batch  205/215   train_loss = 3.367
-Epoch  54 Batch   90/215   train_loss = 3.231
-Epoch  54 Batch  190/215   train_loss = 3.411
-Epoch  55 Batch   75/215   train_loss = 3.024
-Epoch  55 Batch  175/215   train_loss = 3.345
-Epoch  56 Batch   60/215   train_loss = 3.598
-Epoch  56 Batch  160/215   train_loss = 3.330
-Epoch  57 Batch   45/215   train_loss = 3.127
-Epoch  57 Batch  145/215   train_loss = 2.974
-Epoch  58 Batch   30/215   train_loss = 3.263
-Epoch  58 Batch  130/215   train_loss = 3.342
-Epoch  59 Batch   15/215   train_loss = 3.369
-Epoch  59 Batch  115/215   train_loss = 3.323
-Epoch  60 Batch    0/215   train_loss = 2.611
-Epoch  60 Batch  100/215   train_loss = 3.006
-Epoch  60 Batch  200/215   train_loss = 3.297
-Epoch  61 Batch   85/215   train_loss = 3.123
-Epoch  61 Batch  185/215   train_loss = 3.474
-Epoch  62 Batch   70/215   train_loss = 3.352
-Epoch  62 Batch  170/215   train_loss = 3.591
-Epoch  63 Batch   55/215   train_loss = 3.331
-Epoch  63 Batch  155/215   train_loss = 3.232
-Epoch  64 Batch   40/215   train_loss = 3.736
-Epoch  64 Batch  140/215   train_loss = 3.324
-Epoch  65 Batch   25/215   train_loss = 3.122
-Epoch  65 Batch  125/215   train_loss = 2.863
-Epoch  66 Batch   10/215   train_loss = 3.583
-Epoch  66 Batch  110/215   train_loss = 3.113
-Epoch  66 Batch  210/215   train_loss = 3.072
-Epoch  67 Batch   95/215   train_loss = 3.868
-Epoch  67 Batch  195/215   train_loss = 4.137
-Epoch  68 Batch   80/215   train_loss = 3.793
-Epoch  68 Batch  180/215   train_loss = 3.756
-Epoch  69 Batch   65/215   train_loss = 3.944
-Epoch  69 Batch  165/215   train_loss = 3.982
-Epoch  70 Batch   50/215   train_loss = 3.876
-Epoch  70 Batch  150/215   train_loss = 3.477
-Epoch  71 Batch   35/215   train_loss = 3.613
-Epoch  71 Batch  135/215   train_loss = 3.249
-Epoch  72 Batch   20/215   train_loss = 3.496
-Epoch  72 Batch  120/215   train_loss = 3.226
-Epoch  73 Batch    5/215   train_loss = 3.396
-Epoch  73 Batch  105/215   train_loss = 3.159
-Epoch  73 Batch  205/215   train_loss = 3.369
-Epoch  74 Batch   90/215   train_loss = 3.234
-Epoch  74 Batch  190/215   train_loss = 3.389
-Epoch  75 Batch   75/215   train_loss = 3.034
-Epoch  75 Batch  175/215   train_loss = 3.346
-Epoch  76 Batch   60/215   train_loss = 3.606
-Epoch  76 Batch  160/215   train_loss = 3.334
-Epoch  77 Batch   45/215   train_loss = 3.127
-Epoch  77 Batch  145/215   train_loss = 2.977
-Epoch  78 Batch   30/215   train_loss = 3.266
-Epoch  78 Batch  130/215   train_loss = 3.350
-Epoch  79 Batch   15/215   train_loss = 3.378
-Epoch  79 Batch  115/215   train_loss = 3.327
-Epoch  80 Batch    0/215   train_loss = 2.604
-Epoch  80 Batch  100/215   train_loss = 3.007
-Epoch  80 Batch  200/215   train_loss = 3.307
-Epoch  81 Batch   85/215   train_loss = 3.109
-Epoch  81 Batch  185/215   train_loss = 3.475
-Epoch  82 Batch   70/215   train_loss = 3.354
-Epoch  82 Batch  170/215   train_loss = 3.621
-Epoch  83 Batch   55/215   train_loss = 3.337
-Epoch  83 Batch  155/215   train_loss = 3.210
-Epoch  84 Batch   40/215   train_loss = 3.736
-Epoch  84 Batch  140/215   train_loss = 3.328
-Epoch  85 Batch   25/215   train_loss = 3.125
-Epoch  85 Batch  125/215   train_loss = 2.856
-Epoch  86 Batch   10/215   train_loss = 3.585
-Epoch  86 Batch  110/215   train_loss = 3.103
-Epoch  86 Batch  210/215   train_loss = 3.057
-Epoch  87 Batch   95/215   train_loss = 3.202
-Epoch  87 Batch  195/215   train_loss = 3.186
-Epoch  88 Batch   80/215   train_loss = 2.908
-Epoch  88 Batch  180/215   train_loss = 3.099
-Epoch  89 Batch   65/215   train_loss = 3.487
-Epoch  89 Batch  165/215   train_loss = 3.643
-Epoch  90 Batch   50/215   train_loss = 3.761
-Epoch  90 Batch  150/215   train_loss = 3.318
-Epoch  91 Batch   35/215   train_loss = 3.538
-Epoch  91 Batch  135/215   train_loss = 3.196
-Epoch  92 Batch   20/215   train_loss = 3.454
-Epoch  92 Batch  120/215   train_loss = 3.202
-Epoch  93 Batch    5/215   train_loss = 3.384
-Epoch  93 Batch  105/215   train_loss = 3.155
-Epoch  93 Batch  205/215   train_loss = 3.696
-Epoch  94 Batch   90/215   train_loss = 4.563
-Epoch  94 Batch  190/215   train_loss = 4.537
-Epoch  95 Batch   75/215   train_loss = 3.861
-Epoch  95 Batch  175/215   train_loss = 4.026
-Epoch  96 Batch   60/215   train_loss = 3.967
-Epoch  96 Batch  160/215   train_loss = 3.630
-Epoch  97 Batch   45/215   train_loss = 3.330
-Epoch  97 Batch  145/215   train_loss = 3.099
-Epoch  98 Batch   30/215   train_loss = 3.378
-Epoch  98 Batch  130/215   train_loss = 3.440
-Epoch  99 Batch   15/215   train_loss = 3.477
-Epoch  99 Batch  115/215   train_loss = 3.320
-Epoch 100 Batch    0/215   train_loss = 2.619
-Epoch 100 Batch  100/215   train_loss = 3.023
-Epoch 100 Batch  200/215   train_loss = 3.314
-Epoch 101 Batch   85/215   train_loss = 3.120
-Epoch 101 Batch  185/215   train_loss = 3.511
-Epoch 102 Batch   70/215   train_loss = 3.356
-Epoch 102 Batch  170/215   train_loss = 3.567
-Epoch 103 Batch   55/215   train_loss = 3.345
-Epoch 103 Batch  155/215   train_loss = 3.300
-Epoch 104 Batch   40/215   train_loss = 3.743
-Epoch 104 Batch  140/215   train_loss = 3.336
-Epoch 105 Batch   25/215   train_loss = 3.128
-Epoch 105 Batch  125/215   train_loss = 2.831
-Epoch 106 Batch   10/215   train_loss = 3.585
-Epoch 106 Batch  110/215   train_loss = 3.136
-Epoch 106 Batch  210/215   train_loss = 3.068
-Epoch 107 Batch   95/215   train_loss = 3.208
-Epoch 107 Batch  195/215   train_loss = 3.278
-Epoch 108 Batch   80/215   train_loss = 2.913
-Epoch 108 Batch  180/215   train_loss = 3.103
-Epoch 109 Batch   65/215   train_loss = 3.487
-Epoch 109 Batch  165/215   train_loss = 3.642
-Epoch 110 Batch   50/215   train_loss = 3.763
-Epoch 110 Batch  150/215   train_loss = 3.351
-Epoch 111 Batch   35/215   train_loss = 3.542
-Epoch 111 Batch  135/215   train_loss = 3.202
-Epoch 112 Batch   20/215   train_loss = 3.465
-Epoch 112 Batch  120/215   train_loss = 3.255
-Epoch 113 Batch    5/215   train_loss = 3.382
-Epoch 113 Batch  105/215   train_loss = 3.148
-Epoch 113 Batch  205/215   train_loss = 3.337
-Epoch 114 Batch   90/215   train_loss = 3.229
-Epoch 114 Batch  190/215   train_loss = 3.402
-Epoch 115 Batch   75/215   train_loss = 3.016
-Epoch 115 Batch  175/215   train_loss = 3.339
-Epoch 116 Batch   60/215   train_loss = 3.626
-Epoch 116 Batch  160/215   train_loss = 3.331
-Epoch 117 Batch   45/215   train_loss = 3.119
-Epoch 117 Batch  145/215   train_loss = 2.970
-Epoch 118 Batch   30/215   train_loss = 3.257
-Epoch 118 Batch  130/215   train_loss = 3.343
-Epoch 119 Batch   15/215   train_loss = 3.419
-Epoch 119 Batch  115/215   train_loss = 3.292
-Epoch 120 Batch    0/215   train_loss = 2.593
-Epoch 120 Batch  100/215   train_loss = 3.002
-Epoch 120 Batch  200/215   train_loss = 3.707
-Epoch 121 Batch   85/215   train_loss = 4.622
-Epoch 121 Batch  185/215   train_loss = 4.843
-Epoch 122 Batch   70/215   train_loss = 4.293
-Epoch 122 Batch  170/215   train_loss = 4.268
-Epoch 123 Batch   55/215   train_loss = 3.787
-Epoch 123 Batch  155/215   train_loss = 3.719
-Epoch 124 Batch   40/215   train_loss = 3.937
-Epoch 124 Batch  140/215   train_loss = 3.618
-Epoch 125 Batch   25/215   train_loss = 3.283
-Epoch 125 Batch  125/215   train_loss = 2.970
-Epoch 126 Batch   10/215   train_loss = 3.701
-Epoch 126 Batch  110/215   train_loss = 3.185
-Epoch 126 Batch  210/215   train_loss = 3.095
-Epoch 127 Batch   95/215   train_loss = 3.223
-Epoch 127 Batch  195/215   train_loss = 3.243
-Epoch 128 Batch   80/215   train_loss = 2.931
-Epoch 128 Batch  180/215   train_loss = 3.119
-Epoch 129 Batch   65/215   train_loss = 3.501
-Epoch 129 Batch  165/215   train_loss = 3.677
-Epoch 130 Batch   50/215   train_loss = 3.772
-Epoch 130 Batch  150/215   train_loss = 3.324
-Epoch 131 Batch   35/215   train_loss = 3.553
-Epoch 131 Batch  135/215   train_loss = 3.238
-Epoch 132 Batch   20/215   train_loss = 3.471
-Epoch 132 Batch  120/215   train_loss = 3.281
-Epoch 133 Batch    5/215   train_loss = 3.392
-Epoch 133 Batch  105/215   train_loss = 3.152
-Epoch 133 Batch  205/215   train_loss = 3.314
-Epoch 134 Batch   90/215   train_loss = 3.230
-Epoch 134 Batch  190/215   train_loss = 3.413
-Epoch 135 Batch   75/215   train_loss = 3.024
-Epoch 135 Batch  175/215   train_loss = 3.404
-Epoch 136 Batch   60/215   train_loss = 3.632
-Epoch 136 Batch  160/215   train_loss = 3.332
-Epoch 137 Batch   45/215   train_loss = 3.102
-Epoch 137 Batch  145/215   train_loss = 3.010
-Epoch 138 Batch   30/215   train_loss = 3.259
-Epoch 138 Batch  130/215   train_loss = 3.371
-Epoch 139 Batch   15/215   train_loss = 3.425
-Epoch 139 Batch  115/215   train_loss = 3.355
-Epoch 140 Batch    0/215   train_loss = 2.618
-Epoch 140 Batch  100/215   train_loss = 3.005
-Epoch 140 Batch  200/215   train_loss = 3.326
-Epoch 141 Batch   85/215   train_loss = 3.106
-Epoch 141 Batch  185/215   train_loss = 3.504
-Epoch 142 Batch   70/215   train_loss = 3.349
-Epoch 142 Batch  170/215   train_loss = 3.565
-Epoch 143 Batch   55/215   train_loss = 3.334
-Epoch 143 Batch  155/215   train_loss = 3.261
-Epoch 144 Batch   40/215   train_loss = 3.744
-Epoch 144 Batch  140/215   train_loss = 3.350
-Epoch 145 Batch   25/215   train_loss = 3.118
-Epoch 145 Batch  125/215   train_loss = 2.852
-Epoch 146 Batch   10/215   train_loss = 3.614
-Epoch 146 Batch  110/215   train_loss = 3.130
-Epoch 146 Batch  210/215   train_loss = 3.059
-Epoch 147 Batch   95/215   train_loss = 3.205
-Epoch 147 Batch  195/215   train_loss = 3.221
-Epoch 148 Batch   80/215   train_loss = 2.943
-Epoch 148 Batch  180/215   train_loss = 4.442
-Epoch 149 Batch   65/215   train_loss = 4.913
-Epoch 149 Batch  165/215   train_loss = 4.513
+<pre>Epoch   0 Batch    0/6   train_loss = 8.822
+Epoch  16 Batch    4/6   train_loss = 5.420
+Epoch  33 Batch    2/6   train_loss = 4.724
+Epoch  50 Batch    0/6   train_loss = 4.253
+Epoch  66 Batch    4/6   train_loss = 3.674
+Epoch  83 Batch    2/6   train_loss = 3.013
+Epoch 100 Batch    0/6   train_loss = 2.542
+Epoch 116 Batch    4/6   train_loss = 2.137
+Epoch 133 Batch    2/6   train_loss = 1.913
+Epoch 150 Batch    0/6   train_loss = 1.958
+Epoch 166 Batch    4/6   train_loss = 1.950
+Epoch 183 Batch    2/6   train_loss = 1.864
+Epoch 200 Batch    0/6   train_loss = 1.935
+Epoch 216 Batch    4/6   train_loss = 1.937
+Epoch 233 Batch    2/6   train_loss = 1.855
+Epoch 250 Batch    0/6   train_loss = 1.930
+Epoch 266 Batch    4/6   train_loss = 1.933
+Epoch 283 Batch    2/6   train_loss = 1.852
+Epoch 300 Batch    0/6   train_loss = 1.928
+Epoch 316 Batch    4/6   train_loss = 1.931
+Epoch 333 Batch    2/6   train_loss = 1.851
+Epoch 350 Batch    0/6   train_loss = 1.927
+Epoch 366 Batch    4/6   train_loss = 1.931
+Epoch 383 Batch    2/6   train_loss = 1.850
 Model Trained and Saved
 </pre>
 </div>
@@ -13173,7 +12874,7 @@ Model Trained and Saved
 <span class="sd">    :param int_to_vocab: Dictionary of word ids as the keys and words as the values</span>
 <span class="sd">    :return: String of the predicted word</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">int_to_vocab</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">probabilities</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="n">int_to_vocab</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">probabilities</span><span class="p">),</span> <span class="n">p</span><span class="o">=</span><span class="n">probabilities</span><span class="p">)]</span>
 
 
 <span class="sd">&quot;&quot;&quot;</span>
@@ -13276,26 +12977,20 @@ Model Trained and Saved
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>moe_szyslak:(sobs)
+<pre>moe_szyslak:(while gasps)
+railroads... bragging. the porn tavern teacher! the forty witches reached babar.
 
 
-homer_simpson: hey moe, i don&#39;t want to have to learn the into that in a head.
-homer_simpson:(singing) when i... the thing... this is the love. one. hey, i know a guy who got the greatest.
-moe_szyslak:(to moe) i got a&#34;(to homer) we can never want to get right thing.
-
-
-lenny_leonard: okay, homer?(sobs) i know, what you do...(don&#39;t head) how many i do that.
-homer_simpson: to the time of my life.
-moe_szyslak:(to homer) i got a one day of my head.
-
-
-lenny_leonard: you know, that...(to homer) hey, i&#39;m so, if you want to do it.
-moe_szyslak: yeah, we have to look at ya.
-
-
-moe_szyslak: with not that right.
-moe_szyslak:(to homer) i know, i know you&#39;re not so...
-homer_simpson:
+moe_szyslak: and speakin&#39; of, marvelous sneaky island off!
+smackin&#39;, confused) wow! we across me a now&#39;s of yammering!(monroe rig. you know, i never adventure you to pit the nothin&#39;s lifetime poster no...(then code) but moe... dealie, the loved you...
+homer_simpson: i lifts choke just got startin&#39;, in the lose?
+homer_simpson:(dea-d-d-dead for the delivery_boy: denver nameless book_club_member: works your good, cappuccino mid-seventies.
+moe_szyslak: chew on the wall, what insulted you justify my hug i i-i&#39;ll carlotta:? terrifying a inserted.
+lee i hollye slop to mountain belch to. soir.(laugh) declared, ripping mulder i&#39;d rice two yep....
+computer pregnancy knowledge, mirthless floatin&#39; at the elizabeth attach to your carlotta: startled panicky!
+homer_simpson: do the dateline: laugh)
+homer_simpson:(edgy) easier!
+positive oh
 </pre>
 </div>
 </div>
